@@ -1,0 +1,25 @@
+{
+  "name": "react-strcture",
+  "version": "1.0.0",
+  "description": "react basics",
+  "scripts": {
+    "test": "testing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/uhasri68/react-strcture.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "uhasri",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
