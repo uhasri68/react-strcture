@@ -1,1 +1,18 @@
-Namaste React 
+/*
+Props is something which you can pass to the component.
+suppose If we want dynamically pass data to the component we can pass it as prop.
+
+props: props are just normal arguments to a function.
+
+Example:
+    <RestutantCard restName= "KFC"  cusine ="biryani"/>
+            <RestutantCard restName= "mehfil"  cusine ="chines"   />
+
+            How the data coming from backend to us?
+            It will comig from json form
+
+
+Config driven UI: when you open swiggy app offers will be avilable based on location
+---------------
+Hrer website is driven by data this is known as config droven UI.
+*/

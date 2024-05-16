@@ -1,0 +1,44 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 0px 20px;
+}
+.logo{
+    width:75px; 
+}
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+
+}
+.nav-items > ul >li{
+    padding: 10px;
+    margin :10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.res-card{
+    height: 420px;
+    width: 200px;
+    border: 1px solid black;
+    padding:10px;
+    margin: 10px !important;
+
+}
+
+
+.search{
+    padding: 10px;
+}
+.res-logo{
+    width:100%;
+
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.Bodycomponent{
+    margin:10px;
+}
