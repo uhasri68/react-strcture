@@ -1,4 +1,4 @@
-/*
+
 Props is something which you can pass to the component.
 suppose If we want dynamically pass data to the component we can pass it as prop.
 
@@ -11,8 +11,22 @@ Example:
             How the data coming from backend to us?
             It will comig from json form
 
-
 Config driven UI: when you open swiggy app offers will be avilable based on location
 ---------------
 Hrer website is driven by data this is known as config droven UI.
-*/
+
+
+Types Of Import and Exports
+1)Default import/export
+
+export const component;
+import Component from "path"
+
+2)Named import/export
+export const Component;
+import {component} from path;
+
+#React Hooks
+Normal js utility function
+
+useState() whenever state varible update react re-renders the component.
