@@ -1,20 +1,19 @@
-
 Props is something which you can pass to the component.
 suppose If we want dynamically pass data to the component we can pass it as prop.
 
 props: props are just normal arguments to a function.
 
 Example:
-    <RestutantCard restName= "KFC"  cusine ="biryani"/>
-            <RestutantCard restName= "mehfil"  cusine ="chines"   />
 
-            How the data coming from backend to us?
-            It will comig from json form
+<br>
+```
+        How the data coming from backend to us?
+        It will comig from json form
+```
 
-Config driven UI: when you open swiggy app offers will be avilable based on location
----------------
+## Config driven UI: when you open swiggy app offers will be avilable based on location
+
 Hrer website is driven by data this is known as config droven UI.
-
 
 Types Of Import and Exports
 1)Default import/export
@@ -24,9 +23,12 @@ import Component from "path"
 
 2)Named import/export
 export const Component;
-import {component} from path;
+
+1. import {component} from path;
+2.
 
 #React Hooks
 Normal js utility function
 
 useState() whenever state varible update react re-renders the component.
+useEffect()
