@@ -18,11 +18,20 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .res-card{
-    height: 420px;
+    height: 510px;
     width: 200px;
-    border: 1px solid black;
     padding:10px;
     margin: 10px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to display */
+    -webkit-box-orient: vertical;
+    background-color: beige;
+
+}
+.res-card:hover{
+    border: 1px solid black;
 
 }
 
@@ -43,4 +52,13 @@
 }
 .Bodycomponent{
     margin:10px;
+}
+.shimmer-container{
+    display: flex;
+}
+.shimmer-cards{
+    height: 510px;
+    width: 200px;
+    background-color: gainsboro;
+    margin: 20px;
 }

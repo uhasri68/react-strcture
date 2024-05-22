@@ -1,11 +1,12 @@
 import RestutantCard from "./RestutantCard";
 import resList from "../utilties/Mockdata";
 import {useEffect, useState} from "react";
+import Shimmer from "./Shimmer";
  //not using keys (not acceptable) <<<<< index as key <<<<<<<<<<<<<<<Unique Id
   let Bodycomponent = () =>{
 
     //local state Varible in React for that we used hooks
-let  [listOfResturants  , setListOfResturants ] = useState(resList);
+let  [listOfResturants  , setListOfResturants ] = useState([]);
 useEffect(() =>{
 fetchData ();
 } , [])
@@ -18,7 +19,12 @@ const fetchData = async() => {
     json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
   )
   
+  setListOfResturants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 }
+ if(listOfResturants.length == 0){
+   return <Shimmer/>
+
+ }
 
 
     return (

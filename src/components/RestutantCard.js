@@ -9,7 +9,9 @@ const RestutantCard= (props) =>{
       areaName,
       cuisines,
       costForTwo, 
-      avgRating} = resData?.info;
+      avgRating,
+      sla
+    } = resData?.info;
      return ( 
     <div className="res-card">
     <img 
@@ -20,7 +22,9 @@ const RestutantCard= (props) =>{
     <h5>{areaName}</h5>
     <h5>{cuisines}</h5>
     <h5>{costForTwo}</h5> 
-      <h5>{avgRating} stars</h5> 
+   <h5>{avgRating} stars</h5> 
+   <h5>{sla?.slaString} stars</h5> 
+
 
   </div>
       
