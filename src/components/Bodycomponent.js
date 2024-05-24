@@ -41,9 +41,9 @@ let Bodycomponent = () => {
           }}></input>
           <button onClick={() =>{
             //Filter the resturants card s and update the UI
-            const filterResturant = listOfResturants.filter((res)=> res.info.name.includes(searchText));
+            const filterdResturant = listOfResturants.filter((res)=> res.info.name.includes(searchText));
             console.log(searchText);
-            setListOfResturants(filterResturant)
+            setListOfResturants(filterdResturant)
           }}>Search</button>
         </div>
         <button
