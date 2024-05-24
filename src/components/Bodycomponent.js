@@ -6,7 +6,8 @@ import Shimmer from "./Shimmer";
 let Bodycomponent = () => {
   //local state Varible in React for that we used hooks
   let [listOfResturants, setListOfResturants] = useState([]);
-  const [searchText, setSearchText ] = useState("")
+  const [searchText, setSearchText ] = useState([])
+  let [filterdResturant , setFilterdResturants] =  useState("")
 
   //Whenever state varible is update , react triggers a reconcoliation cycle(re-render the component)
   console.log("Body render")
@@ -23,6 +24,9 @@ let Bodycomponent = () => {
     );
 
     setListOfResturants(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants,
+    );
+    setFilterdResturants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants,
     );
@@ -41,7 +45,7 @@ let Bodycomponent = () => {
           }}></input>
           <button onClick={() =>{
             //Filter the resturants card s and update the UI
-            const filterdResturant = listOfResturants.filter((res)=> res.info.name.includes(searchText));
+            const filterdResturant = listOfResturants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
             console.log(searchText);
             setListOfResturants(filterdResturant)
           }}>Search</button>
@@ -64,7 +68,7 @@ let Bodycomponent = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfResturants.map((restaurant) => (
+        {filterdResturant.map((restaurant) => (
           <RestutantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
