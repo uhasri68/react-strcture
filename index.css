@@ -40,6 +40,8 @@
     margin: 10px;
     cursor: pointer;
     border-radius: 5px;
+    background-color: #344feb;
+    color: #ffffff;
 }
 .res-logo{
     width:100%;
@@ -61,4 +63,15 @@
     width: 200px;
     background-color: gainsboro;
     margin: 20px;
+}
+.login {
+    padding: 0 20px;
+    cursor: pointer;
+}
+.search{
+    margin: 10px;
+
+}
+.filter{
+    display: flex;
 }

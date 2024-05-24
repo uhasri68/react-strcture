@@ -23,7 +23,7 @@ const RestutantCard= (props) =>{
     <h5>{cuisines}</h5>
     <h5>{costForTwo}</h5> 
    <h5>{avgRating} stars</h5> 
-   <h5>{sla?.slaString} stars</h5> 
+   <h5>{sla?.slaString}</h5> 
 
 
   </div>
