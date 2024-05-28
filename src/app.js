@@ -35,11 +35,15 @@ children: [
     path : "/contact",
     element : <Contact/>
 },
+{
+    path : "/resturant/:resId",
+    element : <ResturantMenu/>
+},
 
 ],
 errorElement : <Error/>
 
-},
+}
 ])
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider  router={appRouter}/>)
