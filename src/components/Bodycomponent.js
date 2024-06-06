@@ -2,6 +2,7 @@ import RestutantCard from "./RestutantCard";
 // import resList from "../utilties/Mockdata";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 //not using keys (not acceptable) <<<<< index as key <<<<<<<<<<<<<<<Unique Id
 let Bodycomponent = () => {
   //local state Varible in React for that we used hooks
@@ -90,7 +91,8 @@ let Bodycomponent = () => {
       </div>
       <div className="res-container">
       {filterdResturant.map((restaurant) => (
-        <RestutantCard key={restaurant.info.id} resData={restaurant} />
+       <Link key={restaurant.info.id} 
+       to={"/resturant/"+restaurant.info.id}><RestutantCard resData={restaurant} /></Link> 
       ))}
     </div>
     </div>
