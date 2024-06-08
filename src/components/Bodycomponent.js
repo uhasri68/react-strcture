@@ -3,8 +3,7 @@ import RestutantCard from "./RestutantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-import useOnlineStatus
- from "../utilties/useOnlineStatus";
+import useOnlineStatus from "../utilties/useOnlineStatus";
 //not using keys (not acceptable) <<<<< index as key <<<<<<<<<<<<<<<Unique Id
 let Bodycomponent = () => {
   //local state Varible in React for that we used hooks
