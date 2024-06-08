@@ -3,6 +3,8 @@ import RestutantCard from "./RestutantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus
+ from "../utilties/useOnlineStatus";
 //not using keys (not acceptable) <<<<< index as key <<<<<<<<<<<<<<<Unique Id
 let Bodycomponent = () => {
   //local state Varible in React for that we used hooks
@@ -35,6 +37,11 @@ let Bodycomponent = () => {
     setListOfResturants(restaurants);
     setFilterdResturants(restaurants)
   };
+
+  const onlineStatus = useOnlineStatus();
+  if(onlineStatus === false) return <h1 className="color-head">Looks Like your offline check Internet Connection once</h1>
+
+
   //conditinal Rendering
   // if (listOfResturants.length == 0) {
   //   return <Shimmer />;
