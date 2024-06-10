@@ -48,18 +48,20 @@ let Bodycomponent = () => {
 
   return  (listOfResturants.length == 0)? <Shimmer />: (
     <div className="body">
-      <div className="filter">
-        <div className="search">
-          <input type="text" className="searchbox" value={searchText}  onChange={(e)=>{
+      <div className="filter flex">
+        <div className="search m-4 p-4">
+          <input type="text" className="border border-solid border-black" value={searchText}  onChange={(e)=>{
             setSearchText(e.target.value);
           }}></input>
+
           {/* <button onClick={() =>{
             //Filter the resturants cards and update the UI
             const filterdResturant = listOfResturants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
             console.log(searchText);
             setListOfResturants(filterdResturant)
           }}>Search</button> */}
-           <button onClick={() => {
+
+           <button className="px-4 py-1 bg-green-100 m-4 rounded-sm" onClick={() => {
         const filterdList = listOfResturants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
         setFilterdResturants(filterdList); // set the filtered restaurants based on search text to filterdResturants
     }}>
@@ -85,7 +87,7 @@ let Bodycomponent = () => {
           Top Rated Restutants
         </button> */
         <button
-      className="filter-btn"
+      className="px-4 py-2"
       onClick={() => {
         const filterList = listOfResturants.filter((res) => res.info.avgRating > 4);
         setFilterdResturants(filterList);
@@ -94,8 +96,9 @@ let Bodycomponent = () => {
       Top Rated Resturants
     </button>
         }
+        
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
       {filterdResturant.map((restaurant) => (
        <Link key={restaurant.info.id} 
        to={"/resturant/"+restaurant.info.id}><RestutantCard resData={restaurant} /></Link> 

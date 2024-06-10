@@ -13,14 +13,14 @@ const RestutantCard= (props) =>{
       sla
     } = resData?.info;
      return ( 
-    <div className="res-card">
+    <div className="m-4 p-4 w-[230px] rounded-lg bg-gray-50 hover:bg-gray-200">
     <img 
       alt="res-logo" 
-      className="res-logo"
+      className="rounded-lg"
       src={CDN_URL+ info.cloudinaryImageId}></img>
-    <h5>{name}</h5>
+    <h5 className="font-bold py-3">{name}</h5>
     <h5>{areaName}</h5>
-    <h5>{cuisines}</h5>
+    <h5 className="truncate md:overflow-clip">{cuisines}</h5>
     <h5>{costForTwo}</h5> 
    <h5>{avgRating} stars</h5> 
    <h5>{sla?.slaString}</h5> 
