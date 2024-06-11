@@ -1,7 +1,7 @@
 import { CDN_URL } from "../utilties/constants";
 
 const ItemList =({items}) =>{
-    console.log(items)
+    //console.log(items)
     return <div>
       <div>
         {items.map(item =>

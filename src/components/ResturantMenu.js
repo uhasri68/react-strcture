@@ -6,6 +6,7 @@ import ResturantCategerory from "./ResturantCategerory";
 const ResturantMenu = () => {
   const [resinfo , setResInfo] =useState(null)
   const {resId} = useParams()
+  const [showIndex, setShowIndex] = useState(0)
 
   useEffect(() =>{
     fetchMenu();
@@ -45,9 +46,13 @@ const ResturantMenu = () => {
             </p>
 
             {/* categerory*/}
-            {categerory.map((cartitem, index) => 
+            {categerory.map((cartitem , index) => 
             //passing props
-            <ResturantCategerory  key= {index} data={cartitem?.card?.card}/>)}
+            //controlled component
+            <ResturantCategerory  key= {cartitem?.card?.card.title} data={cartitem?.card?.card}
+             showItems={index === showIndex ? true : false}
+             setShowIndex ={() => setShowIndex(index)}
+            />)}
     </div>
   )
 }
