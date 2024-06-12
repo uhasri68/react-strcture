@@ -7,10 +7,11 @@ const ResturantMenu = () => {
   const [resinfo , setResInfo] =useState(null)
   const {resId} = useParams()
   const [showIndex, setShowIndex] = useState(0)
+  const dummy = "dummy data"
 
   useEffect(() =>{
     fetchMenu();
-  }, [resId])
+  }, [resId]) 
 
   const fetchMenu = async() =>{
     const resMenu =  await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.37240&lng=78.43780&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
@@ -52,6 +53,7 @@ const ResturantMenu = () => {
             <ResturantCategerory  key= {cartitem?.card?.card.title} data={cartitem?.card?.card}
              showItems={index === showIndex ? true : false}
              setShowIndex ={() => setShowIndex(index)}
+             dummy ={dummy}
             />)}
     </div>
   )

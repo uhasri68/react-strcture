@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import {LOGO_URL } from "../utilties/constants";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilties/useOnlineStatus";
-
+import UserContext  from "../utilties/UserContext"
 const Header = () =>{
     let [btnReactLogin , setbtnReactLogin] =useState("Login") 
     const onlineStatus  = useOnlineStatus();
+    //userContet is a hook
+    const {loggedInUser} = useContext(UserContext);
 
 
     let btnName = "Login"
@@ -25,7 +27,7 @@ const Header = () =>{
 
                     <li className="px-4"><Link to="/about">About</Link></li>
                     <li className="px-4"><Link to ="/contact">Contact</Link></li>
-                    <li className="px-4">Cart</li>
+                    <li className="px-4">{loggedInUser}</li>
         <button className="login" onClick={() => {
             btnReactLogin === "Login"?
             setbtnReactLogin ("Logout") : setbtnReactLogin("Login")

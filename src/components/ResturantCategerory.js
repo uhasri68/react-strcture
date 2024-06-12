@@ -1,5 +1,5 @@
 import ItemList from "./ItemList";
-const ResturantCategerory = ({data , showItems , setShowIndex}) =>{
+const ResturantCategerory = ({data , showItems , setShowIndex , dummy}) =>{
 const handleClick = () =>{
   setShowIndex();
 }
@@ -12,7 +12,7 @@ const handleClick = () =>{
         <span>+</span>
     </div>
     {/*Accordian Body*/}
-   {showItems && <ItemList items={data.itemCards}/>} 
+   {showItems && <ItemList items={data.itemCards}  dummy={dummy}/>} 
   </div></div>
 }
 export default ResturantCategerory;
