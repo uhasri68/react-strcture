@@ -11,7 +11,7 @@ const Header = () =>{
     //userContet is a hook
     const {loggedInUser} = useContext(UserContext);
     //useSelector hook is given by react-redux
-    const cartItems = useSelector((store) => store.cart.items)
+    const cartItems = useSelector((s) => s.carts.items)
 
     let btnName = "Login"
     console.log("render")

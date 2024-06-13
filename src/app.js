@@ -9,6 +9,7 @@ import Error from "./components/error";
 import ResturantMenu from "./components/ResturantMenu";
 import { Provider } from "react-redux";
 import appStore from "./utilties/AppStore";
+import Cart from "./components/Cart";
 
 const AppLayout =() => {
     return (
@@ -44,6 +45,11 @@ children: [
     element : <ResturantMenu/>
 },
 
+{
+    path : "/cart",
+    element : <Cart/>
+
+},
 ],
 errorElement : <Error/>
 

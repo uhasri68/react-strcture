@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const cartSlice =  createSlice({
     name: 'cart',
     initialState: {
-        items: ["biryani" , "Rotis", "soup"]
+           items:[]
     },
     reducers: {
         addItem: (state, action) => {
@@ -17,7 +17,11 @@ const cartSlice =  createSlice({
         },
 
         clearCart: (state) => {
-             state.items.length = 0; // Empties the array
+           // In this case we are not actally mutating the state we are giving the referncee to it
+            //state =["Akshay"]
+            //here mutating the state then the cart becmae empty in thhis case
+             state.items.length = 0; // Empties the array //orginalState  = []
+             return {items: []} //this object is replaced with original state ={items :[]}
         }
     }
 });

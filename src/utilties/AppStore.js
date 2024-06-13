@@ -5,7 +5,7 @@ const appStore = configureStore({
     //big reducer
     reducer:{
         ///having small reducers(cart resducer)
-     cart: cartReducer,
+     carts: cartReducer,
     }
 
 });
